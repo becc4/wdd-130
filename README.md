@@ -1,2 +1,3 @@
-# wdd-130
-Web Fundamentals - Spring, Website 1
+# WDD 130
+
+Hello, my name is Becca.
