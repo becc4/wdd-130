@@ -1,0 +1,46 @@
+body {
+    background-color: pink;
+}
+
+article {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif
+}
+article img{
+    max-width: 400px;
+    height: auto;
+}
+article ol{
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    font-weight: bold;
+}
+article figure cite {
+    display: block;
+}
+article figure, h1{
+    color: white;
+}
+h1:hover{
+    color: black;
+}
+h1 {
+    font-size: 200%;
+}
+#firstquote blockquote {
+    font-size: 75%;
+    font-family: 'Times New Roman', Times, serif;
+}
+#secondquote blockquote {
+    font-size: 200%;
+    font-family: 'Times New Roman', Times, serif;
+}
+#secondquote figcation {
+    color: black;
+}
+#secondquote figcation cite{
+    font-style: normal;
+}
