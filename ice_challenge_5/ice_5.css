@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    max-width: 2000px;
+}
+#main-card {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+.circle-card {
+    max-width: 250px;
+    height: auto;
+
+    margin: 30px;
+    padding: 0px;
+    border: 10px solid darkgray;
+    border-radius: 50%;
+
+    color: lightgray;
+}
+.inline {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+}
