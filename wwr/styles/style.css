@@ -14,14 +14,14 @@ body {
 h2 { 
     margin: 0;
 }
-
 #content {
     max-width: 1600px;
     margin: 0 auto;
 }
 nav a {
-    text-align: center;
-    padding: 35px;
+    text-align:center;
+
+    padding: 30px;
 }
 #hero-msg h1, #hero-msg h4 {
     text-align: center;
@@ -43,7 +43,7 @@ main section img {
 }
 
 #hero-img {
-    width: 100%
+    width: 100%;
 }
 nav a, .book, .join, footer a {
     text-align: center;
@@ -65,6 +65,9 @@ body{
 }
 header {
     background-color: teal;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .book, .join {
@@ -121,7 +124,9 @@ p {
     padding-top: 5px;
 }
 .icon {
-    padding-top: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
 }
 footer .social img {
     padding-top: 15px;
@@ -131,4 +136,9 @@ footer .social img {
 }
 .card-img {
     border: 10px;
+}
+nav {
+    grid-column: 2/5;
+    display: flex;
+    justify-content: space-between;
 }

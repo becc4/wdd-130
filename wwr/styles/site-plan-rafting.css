@@ -58,6 +58,9 @@ header {
   text-align: center;
   color: var(--paragraph-color-on-color);
   background-color: var(--paragraph-background-color);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 header > h1, header > h2 {
   color: var(--headline-color-on-color);
@@ -101,16 +104,14 @@ nav {
   line-height: 3em;
   text-align: center;
   font-size: 1.2em;
-}
-nav  {
   list-style-type: none;
-  display: flex;
+  display: flex-box;
 }
 nav a {
   padding:1em;
   min-width: 120px;
   text-decoration: none;
-  padding: 10px;
+  padding: 30px;
 }
 nav a:link, nav a:visited {
   color: var(--nav-link-color);
