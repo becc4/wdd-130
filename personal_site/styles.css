@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Roboto+Condensed:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Arvo&family=Montserrat:ital,wght@1,300&family=Nuosu+SIL&family=Roboto+Condensed:ital,wght@1,300&disp');
+
+:root {
+    --heading-font: Abril Fatface, sans-serif;
+    --paragraph-font:  Open Sans, sans-serif;
+    --main-color: #BEEF69;
+    --second-color:#399E00;
+    --different-color: #FF85DF;
+    --fourth-color: #6046E0;
+    --dark-color: #000B6B;
+    --orange: #FFB12D;
+}
+body {
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+    font-family: var(--paragraph-font);
+}
+header {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    text-align: center;
+    background-color: var(--main-color);
+}
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-self: center;
+    margin-right:20px;
+}
+nav a:hover {
+    color: var(--different-color);
+    background-color: var(--dark-color);
+}
+nav a, .social a {
+    text-align: center;
+    text-decoration: none;
+    padding: 20px;
+}
+#logo_link {
+    padding-top: 5px;
+    justify-self: center;
+    align-self: center;
+}
+.logo {
+    max-width: 100px;
+    height: auto;
+    object-fit: contain;
+}
+#hero {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+}
+#hero-box { 
+    grid-column: 1/3;
+    grid-row: 1/2;
+    z-index: -1;
+}
+#hero-img {
+    width: 100%;
+}
+#hero-msg {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 30px;
+    margin: 30px;
+    align-self: center;
+
+    background-color: rgba(300,300,300, 0.5);
+}
+article {
+    padding: 30px;
+}
+#Career-Objectives {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: var(--main-color);
+}
+#Career-Objectives h1 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-color: var(--second-color);
+    text-align: center;
+    padding: 20px;
+}
+#Career-Objectives p {
+    grid-column: 1/4;
+}
+#Education {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: var(--dark-color);
+    gap: 50px 50px;
+}
+h1 {
+    font-family: var(--heading-font);
+}
+#Education img {
+    grid-column: 1/2;
+}
+#Associates, #Bachlors{
+    grid-column: 2/3;
+    text-align: center;
+    background-color: var(--different-color)
+}
+#Bachlors {
+    grid-column: 2/3;
+}
+footer {
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--second-color);
+    padding: 25px 50px;
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer h3 a:hover {
+    text-decoration: underline;
+}
