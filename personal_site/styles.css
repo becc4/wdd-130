@@ -22,6 +22,11 @@ header {
     grid-template-columns: 150px 1fr;
     text-align: center;
     background-color: var(--main-color);
+    
+    position:fixed;
+    z-index: 5;
+    top: 0;
+    width: 100%;
 }
 nav {
     display: grid;
@@ -70,8 +75,11 @@ nav a, .social a {
 
     background-color: rgba(300,300,300, 0.5);
 }
-article {
-    padding: 30px;
+.title_card {
+    padding:20px;
+}
+article, section {
+    padding: 20px;
 }
 #Career-Objectives {
     display: grid;
@@ -105,9 +113,6 @@ h1 {
     text-align: center;
     background-color: var(--different-color)
 }
-#Bachlors {
-    grid-column: 2/3;
-}
 footer {
     text-align: center;
     text-decoration: none;
@@ -117,7 +122,47 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    font-family: var(--paragraph-font);
+    z-index: 5;
 }
 footer h3 a:hover {
     text-decoration: underline;
+}
+
+.date {
+    font-size: 0.75em;
+}
+.sidenav {
+    height: auto; /* Full-height: remove this if you want "auto" height */
+    width: 160px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: var(--dark-color); /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 110px;
+}
+  /* The navigation menu links */
+.sidenav a {
+  /*padding: 8px 8px 16px 16px;*/
+  padding: 10px;
+  text-decoration: none;
+  font-size: 25px;
+  color: var(--second-color);
+  display: block;
+  text-align: center;
+}
+  /* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: var(--different-color);
+  background-color: var(--second-color);
+}
+.notsidenav {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+}
+.title_card {
+    margin-top: 125px;
 }

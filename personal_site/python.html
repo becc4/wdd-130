@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Python</title>
+    <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
     <header>
@@ -18,13 +19,21 @@
             <a href="contactus.html">Contact Us</a>
         </nav>
     </header>
-
-    <body>
-        <div class="title_card">
-            <h1>Python Language</h1>
-            <img src="images/artturi-jalli-g5_rxRjvKmg-unsplash.jpeg" alt="Python programming">
+    <div class="sidenav">
+        <a href="#">Top</a>
+        <a href="#">History</a>
+        <a href="#">TicTacToe</a>
+    </div>
+    <main class="notsidenav">
+        <div id="hero">
+            <div id="hero-box">
+                <img src="images/artturi-jalli-g5_rxRjvKmg-unsplash.jpeg" alt="Python programming">
+            </div>
+            <section id="hero-msg">
+                <h1 class="home-title">Python Language</h1>
+            </section>
         </div>
-        <article id="history_python">
+        <section id="history_python">
             <h1>History</h1>
             <p>
                 I started learning Python in 2020 during a summer semester course at 
@@ -35,29 +44,37 @@
                 as I am working on my Computer Programming certificate at BYU-I.
             </p>
             <img src="images/python-logo-master-v3-TM.png" alt="Python Logo">
-        </article>
-        <article id="python1">
-            <p>
-
+        </section>
+        <article class="python_article1">
+            <h1>TicTacToe Game</h1>
+            <p class="date">June 2022</p>
+            <a href="tictactoe.py"target="_new">tictactoe.py</a>
+            <p>This TicTacToe Game was written as a warmup in CSE210 - Programming with Classes, 
+                and while I did not continue in that class in Spring 2022 semester, it started 
+                setting up some principles of classes such as the proper organization skills and
+                the kind of writing we would be doing.
+                For example, the print_board function is similar to the create_display classes we
+                created that would direct the graphics to the games we made. This practice made me
+                start to think about creating plans before programming with python, since there
+                were more connected and moving elements in this program than in my previous ones.
             </p>
         </article>
-    </body>
-
+    </main>
     <footer>
         <h3>Becca's Website 2022 - Rebecca Roeth</h3>
-<h3><a href="site-plan.html">Site Plan</a></h3>
-<h3><a href="contactus.html">Contact Us</a></h3>
-<div class="social">
-    <a href="https://facebook.com" target="_blank">
-        <img src="images/facebook.png" alt="fb icon">
-    </a>
-    <a href="https://twitter.com" target="_blank">
-        <img src="images/twitter.png" alt="twitter icon">
-    </a>
-    <a href="https://instagram.com" target="blank">
-        <img src="images/instagram.png" alt="instagram icon">
-    </a>
-</div>
+        <h3><a href="site-plan.html">Site Plan</a></h3>
+        <h3><a href="contactus.html">Contact Us</a></h3>
+        <div class="social">
+            <a href="https://facebook.com" target="_blank">
+                <img src="images/facebook.png" alt="fb icon">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="images/twitter.png" alt="twitter icon">
+            </a>
+            <a href="https://instagram.com" target="blank">
+                <img src="images/instagram.png" alt="instagram icon">
+            </a>
+        </div>
     </footer>
 </body>
 </html>
