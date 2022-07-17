@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML/CSS</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -18,13 +19,21 @@
             <a href="contactus.html">Contact Us</a>
         </nav>
     </header>
-
-    <body>
-        <div class="title_card">
-            <h1>HTML and CSS Languages</h1>
-            <img src="images/valery-sysoev-p9OkL4yW3C8-unsplash.jpeg" alt="HTML programming">
+    <div class="sidenav">
+        <a href="#hero">Top</a>
+        <a href="#history">History</a>
+        <a href="#article1">Whitewater Rafting Site</a>
+    </div>
+    <main class="notsidenav">
+        <div id="hero">
+            <div id="hero-box">
+                <img id="hero-img" src="images/valery-sysoev-p9OkL4yW3C8-unsplash.jpeg" alt="HTML programming">
+            </div>
+            <section id="hero-msg">
+                <h1>HTML and CSS Languages</h1>
+            </section>
         </div>
-        <article id="history_css_html">
+        <article id="history">
             <h1>History</h1>
             <p>
                 I started learning HTML and CSS in 2022 at Brigham Young University - 
@@ -37,7 +46,7 @@
             </p>
             <img src="images/jeffrey-leung-NYcUkFJuxg0-unsplash.jpeg" alt="CSS Programming">
         </article>
-        <article id="cs_1">
+        <article id="article1">
             <h1>White Water Rafting Site</h1>
             <p class="date">April-July 2022</p>
             <a href="https://becc4.github.io/wdd-130/wwr/index.html">wwdd/wwr.html</a>
@@ -46,14 +55,108 @@
                 It functions as a company website for DryOur who focuses on white water 
                 rafting, having pages about rivers one could raft on.
             </p>
+            <div class="container">
+                <!-- Full-width images with number text -->
+                <div class="mySlides">
+                  <div class="numbertext">1 / 6</div>
+                    <img src="images/wwrscreenshots/ScreenShot3.31.31.png" style="width:100%" alt="DryOar Logo">
+                </div>
+            
+                <div class="mySlides">
+                  <div class="numbertext">2 / 6</div>
+                    <img src="images/wwrscreenshots/ScreenShot3.32.09.png" style="width:100%" alt="Website cover">
+                </div>
+            
+                <div class="mySlides">
+                  <div class="numbertext">3 / 6</div>
+                    <img src="images/wwrscreenshots/ScreenShot32.20.png" style="width:100%" alt="Home Page - Website Articles">
+                </div>
+            
+                <div class="mySlides">
+                  <div class="numbertext">4 / 6</div>
+                    <img src="images/wwrscreenshots/ScreenShot3.32.50.png" style="width:100%" alt="Home Page - Info Section">
+                </div>
+            
+                <div class="mySlides">
+                  <div class="numbertext">5 / 6</div>
+                    <img src="images/wwrscreenshots/ScreenShot3.33.33.png" style="width:100%" alt="Rivers Page - Article 1">
+                </div>
+            
+                <div class="mySlides">
+                  <div class="numbertext">6 / 6</div>
+                    <img src="images/wwrscreenshots/ScreenShot3.33.56.png" style="width:100%" alt="Rivers Page - Article 2">
+                </div>
+            
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+                <!-- Image text -->
+                <div class="caption-container">
+                  <p id="caption"></p>
+                </div>
+            
+                <!-- Thumbnail images -->
+                <div class="row">
+                  <div class="column">
+                    <img class="demo cursor" src="images/wwrscreenshots/ScreenShot3.31.31.png" style="width:100%" onclick="currentSlide(1)" alt="DryOar Logo">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="images/wwrscreenshots/ScreenShot3.32.09.png" style="width:100%" onclick="currentSlide(2)" alt="Website cover">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="images/wwrscreenshots/ScreenShot3.32.20.png" style="width:100%" onclick="currentSlide(3)" alt="Home Page - Website Articles">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="images/wwrscreenshots/ScreenShot3.32.50.png" style="width:100%" onclick="currentSlide(4)" alt="Home Page - Info Section">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="images/wwrscreenshots/ScreenShot3.33.33.png" style="width:100%" onclick="currentSlide(5)" alt="Rivers Page - Article 1">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="images/wwrscreenshots/ScreenShot3.33.56.png" style="width:100%" onclick="currentSlide(6)" alt="Rivers Page - Article 2">
+                  </div>
+                </div>
+                
+                <script>
+                    let slideIndex = 1;
+                    showSlides(slideIndex);
+                    
+                    function plusSlides(n) {
+                      showSlides(slideIndex += n);
+                    }
+                    
+                    function currentSlide(n) {
+                      showSlides(slideIndex = n);
+                    }
+                    
+                    function showSlides(n) {
+                      let i;
+                      let slides = document.getElementsByClassName("mySlides");
+                      let dots = document.getElementsByClassName("demo");
+                      let captionText = document.getElementById("caption");
+                      if (n > slides.length) {slideIndex = 1}
+                      if (n < 1) {slideIndex = slides.length}
+                      for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                      }
+                      for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                      }
+                      slides[slideIndex-1].style.display = "block";
+                      dots[slideIndex-1].className += " active";
+                      captionText.innerHTML = dots[slideIndex-1].alt;
+                    }
+                    </script>
+            </div>
         </article>
-    </body>
+    </main>
 
     <footer>
         <h3>Becca's Website 2022 - Rebecca Roeth</h3>
-<h3><a href="site-plan.html">Site Plan</a></h3>
-<h3><a href="contactus.html">Contact Us</a></h3>
-<div class="social">
+        <h3><a href="site-plan.html">Site Plan</a></h3>
+        <h3><a href="contactus.html">Contact Us</a></h3>
+        <div class="social">
     <a href="https://facebook.com" target="_blank">
         <img src="images/facebook.png" alt="fb icon">
     </a>

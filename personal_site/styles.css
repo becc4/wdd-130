@@ -57,6 +57,7 @@ nav a, .social a {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr;
+    margin-top:110px;
 }
 #hero-box { 
     grid-column: 1/3;
@@ -75,7 +76,7 @@ nav a, .social a {
 
     background-color: rgba(300,300,300, 0.5);
 }
-.title_card {
+.title-card {
     padding:20px;
 }
 article, section {
@@ -107,11 +108,19 @@ h1 {
 }
 #Education img {
     grid-column: 1/2;
+    grid-row: 2/4;
+    margin: auto;
+    max-width: 80%;
+}
+#Education h1 {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    text-align: center;
 }
 #Associates, #Bachlors{
     grid-column: 2/3;
     text-align: center;
-    background-color: var(--different-color)
+    background-color: var(--different-color);
 }
 footer {
     text-align: center;
@@ -125,6 +134,9 @@ footer {
 
     font-family: var(--paragraph-font);
     z-index: 5;
+
+    bottom: 0;
+    width: 100%;
 }
 footer h3 a:hover {
     text-decoration: underline;
@@ -135,7 +147,7 @@ footer h3 a:hover {
 }
 .sidenav {
     height: auto; /* Full-height: remove this if you want "auto" height */
-    width: 160px; /* Set the width of the sidebar */
+    width: 170px; /* Set the width of the sidebar */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
@@ -166,3 +178,111 @@ footer h3 a:hover {
 .title_card {
     margin-top: 125px;
 }
+#history {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+}
+#history h1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    text-align: center;
+    background-color: var(--main-color);
+}
+#history p {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+#history img {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    margin: auto;
+}
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
